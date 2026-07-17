@@ -4,7 +4,7 @@
 select 
     E.employee_id,
     E.name,
-    count(R.reports_to) reports_count,
+    count(*) reports_count,
     round(avg(R.age), 0) as average_age
 from Employees E
 left join Employees R
